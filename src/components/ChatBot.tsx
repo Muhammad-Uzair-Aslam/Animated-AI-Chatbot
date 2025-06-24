@@ -399,7 +399,7 @@ export default function ChatBot() {
         <p className="text-gray-400 text-sm mt-1">Online and ready to assist</p>
       </div>
 
-      {/* <div className="h-[500px] overflow-y-auto p-6 bg-gray-900 custom-scrollbar">
+      <div className="h-[500px] overflow-y-auto p-6 bg-gray-900 custom-scrollbar">
         <AnimatePresence>
           {messages.map((message) => (
             <motion.div
@@ -461,7 +461,7 @@ export default function ChatBot() {
             >
               <MicrophoneIcon className={`h-6 w-6 ${isRecording ? 'text-white' : 'text-gray-300'}`} />
             </motion.button>
-          </div> */}
+          </div>
 
           <div className="flex-1 flex items-center gap-3">
             <input
@@ -488,8 +488,7 @@ export default function ChatBot() {
             )}
           </div>
         </div>
-  //     </div>
-  //   </div>
-  // );
-          );
+      </div>
+    </div>
+  );
 }

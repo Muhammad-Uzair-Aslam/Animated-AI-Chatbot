@@ -112,6 +112,7 @@ const RiveAvatarVoice = ({ isRecording, showGlow }: { isRecording: boolean, show
       if (glowRotateInput) {
         glowRotateInput.value = false;
       }
+      
     } else {
       if (startVoiceInput) {
         startVoiceInput.value = false;

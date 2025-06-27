@@ -27,10 +27,6 @@ declare global {
   }
 }
 
-const AvatarGlowAnimation = ({ isRecording }: { isRecording: boolean }) => {
-  return null; // Removed custom animation
-};
-
 const STATE_MACHINE = "State Machine 1";
 const INPUT_NAME = "voice start"; // Update based on Rive editor
 
@@ -112,7 +108,7 @@ const RiveAvatarVoice = ({ isRecording, showGlow }: { isRecording: boolean, show
       if (glowRotateInput) {
         glowRotateInput.value = false;
       }
-      
+
     } else {
       if (startVoiceInput) {
         startVoiceInput.value = false;
@@ -164,7 +160,6 @@ const RiveAvatarVoice = ({ isRecording, showGlow }: { isRecording: boolean, show
     </div>
   );
 };
-
 export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -302,7 +297,6 @@ export default function ChatBot() {
         cleanupAudioResources(false);
       } else if (event.error === 'no-speech') {
         console.log('ChatBot - No speech detected, keeping recording active');
-        // Do not stop recording on no-speech
       }
     };
 

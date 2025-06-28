@@ -28,7 +28,7 @@ declare global {
 }
 
 const STATE_MACHINE = "State Machine 1";
-const INPUT_NAME = "voice start"; // Update based on Rive editor
+const INPUT_NAME = "voice start"; 
 
 const RiveAvatar = ({ isRecording }: { isRecording: boolean }) => {
   const { rive, RiveComponent } = useRive({
@@ -84,14 +84,7 @@ const RiveAvatarVoice = ({ isRecording, showGlow }: { isRecording: boolean, show
   const hasTriggeredRef = useRef(false);
 
   useEffect(() => {
-    if (rive) {
-      console.log('RiveAvatarVoice - Rive instance:', rive);
-      console.log('RiveAvatarVoice - State machine names:', rive.stateMachineNames);
-      console.log('RiveAvatarVoice - StartVoice Input:', startVoiceInput);
-      console.log('RiveAvatarVoice - VoiceControl Input:', voiceControlInput);
-      console.log('RiveAvatarVoice - Glow Input:', glowInput);
-      console.log('RiveAvatarVoice - GlowRotate Input:', glowRotateInput);
-    }
+    
     if (isRecording) {
       if (startVoiceInput && !hasTriggeredRef.current) {
         startVoiceInput.value = true;
@@ -457,7 +450,6 @@ export default function ChatBot() {
               <MicrophoneIcon className={`h-6 w-6 ${isRecording ? 'text-white' : 'text-gray-300'}`} />
             </motion.button>
           </div>
-
           <div className="flex-1 flex items-center gap-3">
             <input
               type="text"
